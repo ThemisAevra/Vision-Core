@@ -1,0 +1,25 @@
+model:
+  name: "aeva-snet-base"
+  backbone: "resnet50"
+  pretrained: true
+  voxel_size: [0.2, 0.2, 0.2]
+  grid_dim: [256, 256, 32]
+
+training:
+  batch_size: 16
+  epochs: 100
+  optimizer: "adamw"
+  lr: 0.0001
+  scheduler: "cosine"
+  mixed_precision: true # FP16
+
+data:
+  dataset_path: "/data/aeva_factory_v2"
+  num_workers: 8
+  augmentation:
+    - "random_flip"
+    - "random_rotation_z"
+
+deploy:
+  trt_enabled: true
+  quantization: "int8"
