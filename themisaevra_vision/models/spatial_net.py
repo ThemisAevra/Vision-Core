@@ -2,8 +2,8 @@ import torch.nn as nn
 
 class SpatialNet(nn.Module):
     """
-    AEVA Spatial-Net Architecture.
-    Paper: "Real-Time 3D Semantic Occupancy for Industrial Agents" (AEVA Research, 2025)
+    ThemisAevra Spatial-Net Architecture.
+    Paper: "Real-Time 3D Semantic Occupancy for Industrial Agents" (ThemisAevra Research, 2025)
     """
     def __init__(self, channels=128):
         super().__init__()
@@ -21,5 +21,5 @@ class SpatialNet(nn.Module):
 
     @classmethod
     def from_pretrained(cls, model_id: str):
-        print(f"AEVA Vision: Loading pretrained weights for {model_id} from HuggingFace Hub...")
+        print(f"ThemisAevra Vision: Loading pretrained weights for {model_id} from HuggingFace Hub...")
         return cls()

@@ -1,5 +1,5 @@
 model:
-  name: "aeva-snet-base"
+  name: "themis-aevra-snet-base"
   backbone: "resnet50"
   pretrained: true
   voxel_size: [0.2, 0.2, 0.2]
